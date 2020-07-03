@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.chess-board {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: auto;
+    width: 90vh;
+    height: 90vh;  
+}
+.rank {
+    width: 100%;
+    height: 12.5%;
+    display: flex;
+}
+.tile {
+    position: relative;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+}
+.black-tile {
+    background-color: #0f0f0f;
+}
+.white-tile {
+    background-color: #EEDDE1;
+}
+img.piece {
+    grid-area: overlap;
+    width:100%;
+    position: relative;
+    left:50%;
+    top:30%;
+    transform: translate(-50%, -30%);
+}
+.move {
+    grid-area: overlap;
+    position: relative;
+    width: 30%;
+    height: 30%;
+    top:50%;
+    left:50%;
+    border-radius: 35%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(200, 200, 200, 0.95);
+    z-index: 1;
+}
